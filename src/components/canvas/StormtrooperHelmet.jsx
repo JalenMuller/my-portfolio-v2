@@ -6,7 +6,12 @@ import CanvasLoader from "../Loader";
 const StormtrooperHelmet = () => {
   const stormtrooper = useGLTF("./stormtrooper_helmet/scene.gltf");
   const [rotation, setRotation] = useState(5.6);
+  const [isMobile, setIsMobile] = useState(false);
   useEffect(() => {
+    const screenWidth = window.innerWidth;
+    if (screenWidth < 700) {
+      setIsMobile(true);
+    }
     setTimeout(() => {
       if (rotation > Math.PI * 2) {
         setRotation(0);
@@ -30,7 +35,7 @@ const StormtrooperHelmet = () => {
       <primitive
         object={stormtrooper.scene}
         scale={0.7}
-        position={[8, -6, -11]}
+        position={isMobile ? [8, -8.5, -12] : [8, -6, -11]}
         rotation={[0, rotation, 0]}
         autoRotate={true}
       />

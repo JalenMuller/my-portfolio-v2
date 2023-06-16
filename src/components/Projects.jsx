@@ -24,31 +24,33 @@ const ProjectCard = ({
         options={{ max: 45, scale: 1, speed: 450 }}
         className="bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full h-[28rem]"
       >
-        <div className="relative w-full ">
-          <img src={image} alt={name} className="w-full h-full rounded-2xl" />
-          <div className="absolute inset-0 flex justify-end m-3 card-img_hover">
-            <div
-              onClick={() => window.open(source_code_link, "_blank")}
-              className="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer"
-            >
-              <img
-                src={github}
-                alt="github"
-                className="w-1/2 h-1/2 object-contain"
-              />
+        <div className="relative">
+          <div className="relative w-full ">
+            <img src={image} alt={name} className="w-full h-full rounded-2xl" />
+            <div className="absolute inset-0 flex justify-end m-3 card-img_hover">
+              <div
+                onClick={() => window.open(source_code_link, "_blank")}
+                className="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer"
+              >
+                <img
+                  src={github}
+                  alt="github"
+                  className="w-1/2 h-1/2 object-contain"
+                />
+              </div>
+            </div>
+            <div className="mt-5">
+              <h3 className="text-white font-bold text-xl">{name}</h3>
+              <p className="text-gray-200 text-sm mt-2">{description}</p>
             </div>
           </div>
-          <div className="mt-5">
-            <h3 className="text-white font-bold text-xl">{name}</h3>
-            <p className="text-gray-200 text-sm mt-2">{description}</p>
+          <div className="mt-4 flex flex-wrap gap-2 absolute">
+            {tags.map((tag) => (
+              <p key={tag.name} className={`${tag.color}`}>
+                #{tag.name}
+              </p>
+            ))}
           </div>
-        </div>
-        <div className="mt-4 flex flex-wrap gap-2">
-          {tags.map((tag) => (
-            <p key={tag.name} className={`${tag.color}`}>
-              #{tag.name}
-            </p>
-          ))}
         </div>
       </Tilt>
     </motion.div>
@@ -68,9 +70,9 @@ const Projects = () => {
           variants={fadeIn("", "", 0.1, 1)}
           className="mt-3 text-secondary text-lg max-w-3xl leading-7"
         >
-          These are the personal projects I felt were worth showcasing. All of
-          the projects were made for fun and to showcase and improve my
-          experience. Any code is open-source and free to be used by anyone.
+          These are just a few of the projects I've made. All of these projects
+          are deployed and the code is available on GitHub, with more to come
+          soon!
         </motion.p>
       </div>
       <div className="mt-20 flex flex-wrap gap-7">

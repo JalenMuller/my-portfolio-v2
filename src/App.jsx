@@ -18,11 +18,10 @@ const App = () => {
     const screenWidth = window.innerWidth;
     if (screenWidth < 700) {
       // alert(
-      //   "Not all content will be present on mobile and some models might not load properly."
+      //   "Some things may not work properly on mobile. For the best version please visit on desktop."
       // );
       setIsMobile(true);
     }
-    console.log(isMobile);
   }, []);
   return (
     <BrowserRouter>

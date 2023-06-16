@@ -39,12 +39,13 @@ const About = () => {
         I'm a software developer based in The Netherlands. My passion is for
         making good looking dynamic user interfaces and well-structured systems.
         I consider myself a full-stack developer so I focus on learning both
-        front and back-end skills. I have a problem solving mindset and I'm
-        always focused on finding solutions. I'm a fan of movies, games, sports
-        and I like to excercise daily. I have enlisted myself for a part-time
-        bachelor's education at Hogeschool Rotterdam and I'm currently looking
-        for a job to go along with that. I'm interested in anything code related
-        and working on meaningful projects with passionate teams.
+        front and back-end skills.
+        <br />
+        <br />I already completed a developing degree and have enlisted myself
+        for a part-time bachelor's education at Hogeschool Rotterdam. Of course,
+        I also improve my skills at home on a daily basis. I'm interested in
+        anything code related and working on meaningful projects with passionate
+        teams.
       </motion.p>
       <div className="mt-20 flex flex-wrap justify-center gap-10">
         {services.map((service, i) => (

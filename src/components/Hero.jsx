@@ -17,7 +17,7 @@ const Hero = () => {
             Hi, I'm<span className="text-purple-600"> Jalen</span>
           </h1>
           <p className="sm:w-4/5 text-2xl mt-4 leading-9 text-white-100">
-            I develop JS websites. User Interfaces and web applications.
+            I develop full-stack applications, user interfaces and APIs.
           </p>
         </div>
       </div>
