@@ -6,7 +6,7 @@ import { ComputersCanvas } from "./canvas";
 import { SectionWrapper } from "../hoc";
 import { slideIn } from "../utils/motion";
 import { EnvelopeAtFill, Linkedin, Github } from "react-bootstrap-icons";
-const Contact = () => {
+const Contact = ({ isMobile }) => {
   const formRef = useRef();
   const [form, setForm] = useState({
     name: "",
@@ -25,13 +25,13 @@ const Contact = () => {
       >
         <p className={styles.sectionSubText}>Get in touch</p>
         <h3 className={styles.sectionHeadText}>My Info.</h3>
-        <div className="flex flex-col gap-6 mt-10">
-          <div className="flex items-center text-2xl gap-4 hover:text-purple-500 transition ease-in">
-            <EnvelopeAtFill className="text-4xl" />
+        <div className="flex flex-col gap-6 mt-10 sm:text-2xl">
+          <div className="flex items-center gap-4 hover:text-purple-500 transition ease-in">
+            <EnvelopeAtFill className="text-3xl sm:text-4xl" />
             <a href="mailto:jalen@jalenmuller.com">jalen@jalenmuller.com</a>
           </div>
-          <div className="flex items-center text-2xl gap-4 hover:text-purple-500 transition ease-in">
-            <Linkedin className="text-4xl" />
+          <div className="flex items-center gap-4 hover:text-purple-500 transition ease-in">
+            <Linkedin className="text-3xl sm:text-4xl" />
             <a
               href="https://www.linkedin.com/in/jalen-muller-374578277"
               target="_blank"
@@ -39,14 +39,15 @@ const Contact = () => {
               Jalen Muller
             </a>
           </div>
-          <div className="flex items-center text-2xl gap-4 hover:text-purple-500 transition ease-in">
-            <Github className="text-4xl" />
+          <div className="flex items-center gap-4 hover:text-purple-500 transition ease-in">
+            <Github className="text-3xl sm:text-4xl" />
             <a href="https://github.com/jalenmuller" target="_blank">
               Jalen Muller
             </a>
           </div>
         </div>
       </motion.div>
+
       <motion.div
         variants={slideIn("right", "tween", 0.2, 1)}
         className="xl:flex-1 xl:h-auto md:h-[550px] h-[350px]"

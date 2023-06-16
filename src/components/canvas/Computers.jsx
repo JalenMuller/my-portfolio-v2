@@ -10,7 +10,7 @@ const Computers = ({ isMobile }) => {
       <hemisphereLight intensity={0.15} groundColor="black" />
       <pointLight intensity={1} />
       <spotLight
-        position={[-20, 50, 10]}
+        position={[-60, 60, 0]}
         angle={0.12}
         penumbra={1}
         intensity={1}
@@ -20,7 +20,7 @@ const Computers = ({ isMobile }) => {
       <primitive
         object={spaceship.scene}
         scale={isMobile ? 0.35 : 0.5}
-        position={isMobile ? [-1, 0, -1] : [8, -2, -0.75]}
+        position={[14, -2, 4]}
         rotation={[-0.01, -0.2, -0.1]}
       />
     </mesh>
@@ -33,22 +33,24 @@ const ComputersCanvas = () => {
     setIsMobile(screenWidth < 700);
   }, []);
   return (
-    <Canvas
-      frameloop="demand"
-      shadows
-      camera={{ position: [40, 5, 20], fov: 25 }}
-      gl={{ preserveDrawingBuffer: true }}
-    >
-      <Suspense fallback={<CanvasLoader />}>
-        <OrbitControls
-          enableZoom={false}
-          maxPolarAngle={Math.PI / 2}
-          minPolarAngle={Math.PI / 2}
-        />
-        <Computers isMobile={isMobile} />
-      </Suspense>
-      <Preload all />
-    </Canvas>
+    <div className="w-screen">
+      <Canvas
+        frameloop="demand"
+        shadows
+        camera={{ position: [10, 5, 20], fov: 25 }}
+        gl={{ preserveDrawingBuffer: true }}
+      >
+        <Suspense fallback={<CanvasLoader />}>
+          <OrbitControls
+            enableZoom={false}
+            maxPolarAngle={Math.PI / 2}
+            minPolarAngle={Math.PI / 2}
+          />
+          <Computers isMobile={isMobile} />
+        </Suspense>
+        <Preload all />
+      </Canvas>
+    </div>
   );
 };
 export default ComputersCanvas;

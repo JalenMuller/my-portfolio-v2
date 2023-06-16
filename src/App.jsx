@@ -1,9 +1,9 @@
+import { useState, useEffect } from "react";
 import { BrowserRouter } from "react-router-dom";
 import {
   About,
   Contact,
   Experience,
-  Feedbacks,
   Hero,
   Navbar,
   Tech,
@@ -13,6 +13,17 @@ import {
 import "./app.css";
 
 const App = () => {
+  const [isMobile, setIsMobile] = useState(false);
+  useEffect(() => {
+    const screenWidth = window.innerWidth;
+    if (screenWidth < 700) {
+      alert(
+        "Not all content will be present on mobile and some models might not load properly."
+      );
+      setIsMobile(true);
+    }
+    console.log(isMobile);
+  }, []);
   return (
     <BrowserRouter>
       <div className="relative z-0 bg-primary">
@@ -24,9 +35,8 @@ const App = () => {
         <Experience />
         <Tech />
         <Projects />
-        {/* <Feedbacks /> */}
         <div className="relative z-0">
-          <Contact />
+          <Contact isMobile={isMobile} />
           <StarsCanvas />
         </div>
       </div>
