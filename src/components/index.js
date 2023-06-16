@@ -1,5 +1,5 @@
 import {
-  EarthCanvas,
+  StormtrooperHelmetCanvas,
   BallCanvas,
   ComputersCanvas,
   StarsCanvas,
@@ -22,7 +22,7 @@ export {
   Projects,
   Feedbacks,
   Contact,
-  EarthCanvas,
+  StormtrooperHelmetCanvas,
   BallCanvas,
   ComputersCanvas,
   StarsCanvas,

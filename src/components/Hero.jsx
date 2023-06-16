@@ -1,6 +1,6 @@
 import React from "react";
 import { styles } from "../styles";
-import { ComputersCanvas } from "./canvas";
+import { StormtrooperHelmetCanvas } from "./canvas";
 import { motion } from "framer-motion";
 const Hero = () => {
   return (
@@ -21,7 +21,7 @@ const Hero = () => {
           </p>
         </div>
       </div>
-      <ComputersCanvas />
+      <StormtrooperHelmetCanvas />
       <div className="absolute bottom-10 md:bottom-16 w-full flex justify-center items-center">
         <a href="#about">
           <div className="w-[35px] h-[64px] rounded-3xl border-4 border-gray-100 flex justify-center items-start p-2">
