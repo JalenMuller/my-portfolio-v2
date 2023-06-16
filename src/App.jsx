@@ -17,9 +17,9 @@ const App = () => {
   useEffect(() => {
     const screenWidth = window.innerWidth;
     if (screenWidth < 700) {
-      alert(
-        "Not all content will be present on mobile and some models might not load properly."
-      );
+      // alert(
+      //   "Not all content will be present on mobile and some models might not load properly."
+      // );
       setIsMobile(true);
     }
     console.log(isMobile);
