@@ -2,7 +2,7 @@ import React, { Suspense, useEffect, useState } from "react";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
 import CanvasLoader from "../Loader";
-const Computers = ({ isMobile }) => {
+const Spaceship = ({ isMobile }) => {
   const spaceship = useGLTF("./spaceship/scene.gltf");
 
   return (
@@ -19,25 +19,25 @@ const Computers = ({ isMobile }) => {
       />
       <primitive
         object={spaceship.scene}
-        scale={isMobile ? 0.35 : 0.5}
-        position={[14, -2, 4]}
-        rotation={[-0.01, -0.2, -0.1]}
+        scale={isMobile ? 0.9 : 1.2}
+        position={[2, -5, 0]}
+        rotation={[-0, -0.4, -0.2]}
       />
     </mesh>
   );
 };
-const ComputersCanvas = () => {
+const SpaceshipCanvas = () => {
   const [isMobile, setIsMobile] = useState(false);
   useEffect(() => {
     const screenWidth = window.innerWidth;
     setIsMobile(screenWidth < 700);
   }, []);
   return (
-    <div className="w-screen">
+    <div className="h-[40vh]">
       <Canvas
         frameloop="demand"
         shadows
-        camera={{ position: [10, 5, 20], fov: 25 }}
+        camera={{ position: [50, 5, 20], fov: 30 }}
         gl={{ preserveDrawingBuffer: true }}
       >
         <Suspense fallback={<CanvasLoader />}>
@@ -46,11 +46,11 @@ const ComputersCanvas = () => {
             maxPolarAngle={Math.PI / 2}
             minPolarAngle={Math.PI / 2}
           />
-          <Computers isMobile={isMobile} />
+          <Spaceship isMobile={isMobile} />
         </Suspense>
         <Preload all />
       </Canvas>
     </div>
   );
 };
-export default ComputersCanvas;
+export default SpaceshipCanvas;

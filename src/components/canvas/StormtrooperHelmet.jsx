@@ -34,7 +34,7 @@ const StormtrooperHelmet = () => {
       />
       <primitive
         object={stormtrooper.scene}
-        scale={0.7}
+        scale={isMobile ? 0.7 : 1}
         position={isMobile ? [8, -8.5, -12] : [8, -6, -11]}
         rotation={[0, rotation, 0]}
         autoRotate={true}

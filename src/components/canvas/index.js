@@ -1,6 +1,6 @@
 import StormtrooperHelmetCanvas from "./StormtrooperHelmet";
 import BallCanvas from "./Ball";
-import ComputersCanvas from "./Computers";
+import SpaceshipCanvas from "./Spaceship";
 import StarsCanvas from "./Stars";
 
-export { StormtrooperHelmetCanvas, BallCanvas, ComputersCanvas, StarsCanvas };
+export { StormtrooperHelmetCanvas, BallCanvas, SpaceshipCanvas, StarsCanvas };

@@ -1,7 +1,7 @@
 import {
   StormtrooperHelmetCanvas,
   BallCanvas,
-  ComputersCanvas,
+  SpaceshipCanvas,
   StarsCanvas,
 } from "./canvas";
 import Hero from "./Hero";
@@ -22,6 +22,6 @@ export {
   Contact,
   StormtrooperHelmetCanvas,
   BallCanvas,
-  ComputersCanvas,
+  SpaceshipCanvas,
   StarsCanvas,
 };

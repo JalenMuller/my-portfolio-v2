@@ -20,6 +20,8 @@ import redux from "./tech/redux.png";
 import tailwind from "./tech/tailwind.png";
 import typescript from "./tech/typescript.png";
 import threejs from "./tech/threejs.svg";
+import laravel from "./tech/laravel.png";
+import angular from "./tech/angular.svg";
 import informapp from "./company/informapp.png";
 import tcr from "./company/tcr.jpg";
 import oxolutions from "./company/oxolutions.jpg";
@@ -50,6 +52,8 @@ export {
   tailwind,
   typescript,
   threejs,
+  laravel,
+  angular,
   informapp,
   oxolutions,
   groovify,

@@ -20,7 +20,7 @@ const Navbar = () => {
             window.scrollTo(0, 0);
           }}
         >
-          <img src={logo} alt="logo" className="h-14 object-contain" />
+          <img src={logo} alt="logo" className="h-12 object-contain" />
           <p className="text-white text-xl text-md cursor-pointer flex font-extralight">
             Jalen<span className="ml-1 text-purple-500 font-bold">Muller</span>
           </p>
@@ -48,24 +48,26 @@ const Navbar = () => {
           <div
             className={`${
               !toggle ? "hidden" : "flex"
-            } p-6 black-gradient absolute top-20 right-0 mx-4 my-2 min-w-[10rem] z-10 rounded-xl`}
+            } green-pink-gradient p-0.5 rounded-md shadow-card absolute top-20 right-0 mx-4 my-2 min-w-[10rem] z-10`}
           >
-            <ul className="list-none flex justify-end items-start flex-col gap-4">
-              {navLinks.map((link) => (
-                <li
-                  key={link.id}
-                  className={`${
-                    active === link.title ? "text-white" : "text-gray-300"
-                  } font-poppins font-medium cursor-pointer text-lg`}
-                  onClick={() => {
-                    setToggle(!toggle);
-                    setActive(link.title);
-                  }}
-                >
-                  <a href={`#${link.id}`}>{link.title}</a>
-                </li>
-              ))}
-            </ul>
+            <div className="bg-tertiary w-full h-full p-3">
+              <ul className="list-none flex justify-end items-start flex-col gap-4">
+                {navLinks.map((link) => (
+                  <li
+                    key={link.id}
+                    className={`${
+                      active === link.title ? "text-white" : "text-gray-300"
+                    } font-poppins font-medium cursor-pointer text-lg`}
+                    onClick={() => {
+                      setToggle(!toggle);
+                      setActive(link.title);
+                    }}
+                  >
+                    <a href={`#${link.id}`}>{link.title}</a>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
         </div>
       </div>
