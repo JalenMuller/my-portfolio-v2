@@ -7,11 +7,14 @@ const StormtrooperHelmet = () => {
   const stormtrooper = useGLTF("./stormtrooper_helmet/scene.gltf");
   const [rotation, setRotation] = useState(5.6);
   const [isMobile, setIsMobile] = useState(false);
+
   useEffect(() => {
     const screenWidth = window.innerWidth;
     if (screenWidth < 700) {
       setIsMobile(true);
     }
+  }, []);
+  useEffect(() => {
     setTimeout(() => {
       if (rotation > Math.PI * 2) {
         setRotation(0);
